@@ -1,41 +1,28 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-class App extends React.Component {
-  state = {
-    name: "",
-  };
+const App = () => {
+  const [name, setName] = useState("");
 
-  componentDidMount() {
+  const getData = () => {
     fetch("http://localhost:3000")
       .then((res) => res.json())
-      .then((data) => this.setState({ name: data.name }));
-  }
+      .then((data) => {
+        console.log(" data ", data);
+        setName(data.name);
+      });
+  };
 
-  render() {
-    return (
-      <>
-        <h1>Hello {this.state.name}!</h1>
-      </>
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      // </div>
-    );
-  }
-}
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <>
+      <h1>Hello {name}</h1>
+    </>
+  );
+};
 
 export default App;
