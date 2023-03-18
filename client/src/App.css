@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.Notfound {
+  color:rgb(3, 241, 241)
+}

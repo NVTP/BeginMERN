@@ -1,28 +1,16 @@
-import logo from "./logo.svg";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import NotFound from "./pages/NotFound";
 
-const App = () => {
-  const [name, setName] = useState("");
-
-  const getData = () => {
-    fetch("http://localhost:3000")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(" data ", data);
-        setName(data.name);
-      });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+function App() {
   return (
-    <>
-      <h1>Hello {name}</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
   );
-};
+}
 
 export default App;
