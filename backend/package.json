@@ -13,9 +13,10 @@
     "url": "git+https://github.com/NVTP/BeginMERN.git"
   },
   "bugs": {
-    "url": "https://github.com//NVTP/BeginMERN/issues"
+    "url": "https://github.com/NVTP/BeginMERN/issues"
   },
-  "homepage": "https://github.com//NVTP/BeginMERN#readme",
+  "engines": { "node": "18.2" },
+  "homepage": "https://github.com/NVTP/BeginMERN#readme",
   "author": "",
   "license": "ISC",
   "dependencies": {
