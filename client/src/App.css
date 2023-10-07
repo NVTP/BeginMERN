@@ -40,3 +40,84 @@
 .Notfound {
   color:rgb(3, 241, 241)
 }
+
+.dark {
+  background-color: #333;
+  color: #fff;
+  }
+  .light {
+  background-color: #fff;
+  color: #333;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile */
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .waviy {
+      position: relative;
+      -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0,0,0,.2));
+      font-size: 20px;
+    }
+    .shadow {
+      position: relative;
+      -webkit-box-reflect: below -0px linear-gradient(transparent, rgba(0,0,0,.2));
+      font-size: 4px;
+      /* margin-left: 1rem; */
+    }
+  }
+
+  /* Tablet */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .waviy {
+      position: relative;
+      -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0,0,0,.2));
+      font-size: 30px;
+    }
+    .shadow {
+      position: relative;
+      -webkit-box-reflect: below -0px linear-gradient(transparent, rgba(0,0,0,.2));
+      font-size: 15px;
+      margin-left: 1rem;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1024px) {
+  .waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 60px;
+  }
+  .shadow {
+    position: relative;
+    -webkit-box-reflect: below -0px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 40px;
+    margin-left: 1rem;
+  }
+}
+
+  .waviy span {
+    font-family: 'Nunito', cursive;
+    font-weight: 1000;
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-transform: uppercase;
+    animation: waviy 1.5s infinite;
+    animation-delay: calc(.1s * var(--i));
+  }
+
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }

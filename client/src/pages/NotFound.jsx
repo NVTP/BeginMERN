@@ -20,7 +20,7 @@ const NotFound = () => {
           alignContent="center"
           style={{
             minHeight: "100vh",
-            backgroundColor: Color.grey,
+            backgroundColor: Color.black,
             paddingLeft: 0,
           }}
         >
@@ -29,11 +29,14 @@ const NotFound = () => {
             <Stack
               spacing={0}
               direction="row"
-              justifyContent="center"
-              justifyItems="center"
+              // justifyContent="center"
+              // justifyItems="center"
             >
               <IconButton onClick={handleBack}>
-                <ArrowBackIcon className="Notfound" style={{ fontSize: "2rem" }} />
+                <ArrowBackIcon
+                  className="Notfound"
+                  style={{ fontSize: "2rem" }}
+                />
               </IconButton>
               <h2 className="Notfound">Go Back</h2>
             </Stack>
